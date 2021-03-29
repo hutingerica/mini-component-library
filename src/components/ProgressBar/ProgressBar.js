@@ -65,7 +65,6 @@ const ValueBar = styled(BaseWrapper)`
   width: ${props=>props.progress};
   height: var(--barHeight);
   border-radius: 4px 0 0 4px;
-
 `
 const FullValueBar = styled(ValueBar)`
   border-radius: 4px;

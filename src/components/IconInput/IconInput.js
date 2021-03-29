@@ -9,11 +9,13 @@ import VisuallyHidden from '../VisuallyHidden';
 const IconInput = ({ label, icon, width=250, size, placeholder }) => {
   const InputSize = size === "small" ? SmallInput : LargeInput;
   const iconsize = size === "small" ? 16 : 24;
+  const stroke = size === "small" ? 1 : 2;
+
   return (
     <Wrapper>
       <VisuallyHidden>{label}</VisuallyHidden>
       <IconWrapper style={{'--size': iconsize + 'px'}}>
-        <Icon id={icon} size={iconsize}/>
+        <Icon id={icon} strokeWidth={stroke} size={iconsize}/>
       </IconWrapper>
       <InputSize placeholder={placeholder} style={{'--width': width + 'px'}}/>
     </Wrapper>
@@ -36,7 +38,7 @@ const TextInput = styled.input`
   font-weight: 700;
 
   &:focus {
-    outline-offset: 5px;
+    outline-offset: 4px;
     outline: 2px auto -webkit-focus-ring-color;
   }
   &::placeholder {
@@ -49,7 +51,7 @@ const IconWrapper = styled.div`
   height: var(--size);
   position: absolute;
   top: 0;
-  bottom: 1.5px;
+  bottom:0.5px;
   margin: auto;
 `
 const SmallInput = styled(TextInput)`

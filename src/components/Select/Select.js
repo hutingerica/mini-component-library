@@ -6,7 +6,7 @@ import Icon from '../Icon';
 import { getDisplayedValue } from './Select.helpers';
 
 const Select = ({ label, value, onChange, children }) => {
-  
+
   const displayedValue = getDisplayedValue(value, children);
 
   return (
@@ -26,15 +26,15 @@ const Select = ({ label, value, onChange, children }) => {
 };
 
 const Wrapper = styled.div`
+  position: relative;
   width: max-content;
-  position:relative;
 `
 const SelectWrapper = styled.select`
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   opacity: 0;
 `
 const DisplayWrapper = styled.div`
@@ -60,7 +60,7 @@ const IconWrapper = styled.div`
   top:0;
   bottom:0;
   margin: auto;
-  right: 16px;
+  right: 10px;
   pointer-events: none;
 `
 export default Select;
